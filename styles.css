@@ -1,0 +1,110 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* End Fonts */
+
+
+/* doc styles */
+
+html {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body {
+    padding: 10%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    height: 500px;
+}
+
+.image-container {
+    height: 500px;
+}
+
+.image-container img {
+    height: 500px;
+    width: 350px;
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+
+/* Form Styles */
+
+.form-container {
+    grid-row: 1;
+    grid-column: 2;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.form-container h1 {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color: #301F0D;
+}
+
+.form-container p {
+    text-align: center;
+}
+
+form {}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #301F0D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(61, 40, 17);
+}
+
+label {
+    font-family: 'Oswald', sans-serif;
+    color: #301F0D;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    color: #301F0D;
+}
