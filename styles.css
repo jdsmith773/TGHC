@@ -30,10 +30,8 @@ body {
 }
 
 .image-container {
-    height: 500px;
-}
-
-.image-container img {
+    background-image: url("Logo.png");
+    background-size: contain;
     height: 500px;
     width: 350px;
     grid-row: span 1;
@@ -47,20 +45,21 @@ body {
     grid-row: 1;
     grid-column: 2;
     margin: auto;
-    padding: 0 20px;
+    padding: 5% 10%;
+    height: 500px;
 }
 
-.form-container h1 {
+.form-container h4 {
     font-family: 'Oswald', sans-serif;
     text-align: center;
     color: #301F0D;
+    padding: 0;
+    margin: 0;
 }
 
 .form-container p {
     text-align: center;
 }
-
-form {}
 
 input[type=text] {
     width: 100%;
@@ -94,6 +93,16 @@ input[type=submit] {
     font-size: 18px;
 }
 
+select[name=customer-type] {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+}
+
 input[type=submit]:hover {
     background-color: rgb(61, 40, 17);
 }
@@ -101,6 +110,7 @@ input[type=submit]:hover {
 label {
     font-family: 'Oswald', sans-serif;
     color: #301F0D;
+    text-transform: uppercase;
 }
 
 p {
