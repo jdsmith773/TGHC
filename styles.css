@@ -49,13 +49,20 @@ body {
     height: 500px;
 }
 
-.form-container h4,
-h1 {
+.form-container h1 {
     font-family: 'Oswald', sans-serif;
     text-align: center;
     color: #301F0D;
     padding: 0;
-    margin: 0;
+    margin: 10px 0 0 0;
+}
+
+.form-container h4 {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: #301F0D;
+    padding: 0;
+    margin: 10px 0 0 0;
 }
 
 .form-container p {
