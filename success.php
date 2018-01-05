@@ -1,17 +1,37 @@
-<?php include 'config-db.php';?>
-
 <?php
-if(!empty($_POST['name'])&& !empty($_POST['email']) && !empty($_POST['customer'])){
-    $name = mysqli_real_escape_string($link, $_POST['name']);
-    $email = mysqli_real_escape_string($link, $_POST['email']);
-    $customer = mysqli_real_escape_string($link, $_POST['customer']);
 
-    $query = "INSERT INTO `customers`(`ID`, `name`, `email`, `customer`) VALUES ('ID','$name','$email','$customer')";
+$name = filter_input(INPUT_POST, 'name');
+$email = filter_input(INPUT_POST, 'email');
+    if(!empty ($name)){
+    if(!empty ($email)){
+$db_server = "localhost";
+$db_username = "root";
+$db_password = "root";
+$dbname = "landing_page";
 
-    if(!mysqli_query($link, $query)){
-        die(mysqli_error($link));
-    }else{
-        header("Location: index.php?success=Message%20Added");
-    }
+$link = new mysqli ($db_server, $db_username, $db_password, $dbname);
+
+if(mysqli_connect_error()){
+    die('Connect Error('. mysqli_connect_errno().')'.mysqli_connect_error());
 }
+else{
+    $sql = "INSERT INTO customers (`name`, `email`) VALUES ($name,$email)";
+    if ($link->query($sql)){
+        echo "Thank you";
+    }else{
+        echo "Error: ". $sql ."<br>". $link->error;
+    }
+    $link->close();
+}
+
+}
+else {
+    echo "email cant be empty";
+    die();
+}
+    } 
+    else{
+        echo "name cant be empty";
+        die();
+    }
 ?>
